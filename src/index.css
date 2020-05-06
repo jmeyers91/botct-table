@@ -1,13 +1,47 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 1rem;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+.PlayerList {
+  list-style: none;
+}
+
+.TableCanvas {
+  border: 2px solid #ddd;
+  width: 800px;
+  height: 800px;
+  flex-shrink: 0;
+  align-self: center;
+}
+
+button {
+  background-color: #00236b;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  align-self: center;
+  margin-top: 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+input {
+  height: 40px;
+  padding: 0 0.5rem 0 0.5rem;
+}
+
+.PlayerDeleteButton {
+  background-color: transparent;
+  color: #222;
 }
