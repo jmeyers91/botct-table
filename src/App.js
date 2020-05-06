@@ -1,5 +1,6 @@
 import React, { useState, useCallback, useEffect, useMemo } from "react";
 import { v4 as uuid } from "uuid";
+import shuffle from "lodash.shuffle";
 import "./App.css";
 
 const stateVersion = 1;
@@ -90,6 +91,10 @@ function App() {
     downloadCanvas(canvas, filename);
   }, [canvas]);
 
+  const handleShuffleClick = useCallback(() => {
+    setPlayers((players) => shuffle(players));
+  }, []);
+
   useEffect(() => {
     if (!canvas || !canvasContext) {
       return;
@@ -143,6 +148,7 @@ function App() {
         ))}
       </ul>
       <button onClick={handleAddPlayer}>Add Player</button>
+      <button onClick={handleShuffleClick}>Shuffle players</button>
       <button onClick={toggleShowTable}>View Table</button>
     </div>
   );
